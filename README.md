@@ -1,6 +1,5 @@
 # Alexander Brutski
 
-## About me
 ### Beginner IT specialist.
 
 I studied mathematics and computer science at the Gomel State Regional Lyceum.
