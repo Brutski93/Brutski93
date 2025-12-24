@@ -18,17 +18,17 @@ AMy goal is to become a Front-end developer, and later a full-stack developer.
 
 ## Code examples
 ```
-function creatAndAppend(whatParent, whatTag, whatClass = false, whatText = false) {
-  const newItem = document.createElement(whatTag);
-  if (whatClass) {
-    whatClass = whatClass.split(' ');
-    for (let i = 0; i < whatClass.length; i += 1) {
-      newItem.classList.add(whatClass[i]);
-    }
+function creatAndAppend(parent, tagName, className = false, textContent = false, attributes = {}) {
+  const child = document.createElement(tagName);
+  if (className) {
+    className.split(' ').forEach(class => child.classList.add(class));
   }
-  if (whatText) newItem.innerHTML = whatText;
-  whatParent.appendChild(newItem);
-  return newItem;
+  if (textContent) child.textContent = textContent;
+  for (const [key, value] of Object.entries(attributes)) {
+    child.setAttribute(key, value);
+  }
+  parent.appendChild(child);
+  return child;
 }
 ```
 ## Some of my educational projects
