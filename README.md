@@ -17,7 +17,8 @@ AMy goal is to become a Front-end developer, and later a full-stack developer.
 - instagram: [Alexander Brutski](https://www.instagram.com/alexander.durden/)
 
 ## Code examples
-```function creatAndAppend(whatParent, whatTag, whatClass = false, whatText = false) {
+```
+function creatAndAppend(whatParent, whatTag, whatClass = false, whatText = false) {
   const newItem = document.createElement(whatTag);
   if (whatClass) {
     whatClass = whatClass.split(' ');
