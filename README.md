@@ -18,10 +18,10 @@ AMy goal is to become a Front-end developer, and later a full-stack developer.
 
 ## Code examples
 ```
-function creatAndAppend(parent, tagName, className = false, textContent = false, attributes = {}) {
+function createAndAppend(parent, tagName, className = false, textContent = false, attributes = {}) {
   const child = document.createElement(tagName);
   if (className) {
-    className.split(' ').forEach(class => child.classList.add(class));
+    className.split(' ').forEach(clas => child.classList.add(clas));
   }
   if (textContent) child.textContent = textContent;
   for (const [key, value] of Object.entries(attributes)) {
