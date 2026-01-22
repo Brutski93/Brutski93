@@ -18,6 +18,7 @@ AMy goal is to become a Front-end developer, and later a full-stack developer.
 
 ## Code examples
 ```
+JS-version:
 function createAndAppend(parent, tagName, className = false, textContent = false, attributes = {}) {
   const child = document.createElement(tagName);
   if (className) {
@@ -26,6 +27,29 @@ function createAndAppend(parent, tagName, className = false, textContent = false
   if (textContent) child.textContent = textContent;
   for (const [key, value] of Object.entries(attributes)) {
     child.setAttribute(key, value);
+  }
+  parent.appendChild(child);
+  return child;
+}
+TS-verison:
+export function createAndAppend(
+  parent: HTMLElement,
+  tagName: string,
+  className?: string,
+  textContent?: string,
+  attributes: Record<string, string> = {},
+  styles: Record<string, string> = {},)
+  {
+  const child = document.createElement(tagName);
+  if (className) {
+    className.split(' ').forEach(clas => child.classList.add(clas));
+  }
+  if (textContent) child.textContent = textContent;
+  for (const [key, value] of Object.entries(attributes)) {
+    child.setAttribute(key, value);
+  }
+  for (const [property, value] of Object.entries(styles)) {
+    child.style.setProperty(property, value);
   }
   parent.appendChild(child);
   return child;
