@@ -17,8 +17,8 @@ AMy goal is to become a Front-end developer, and later a full-stack developer.
 - instagram: [Alexander Brutski](https://www.instagram.com/alexander.durden/)
 
 ## Code examples
-```
 JS-version:
+```
 function createAndAppend(parent, tagName, className = false, textContent = false, attributes = {}) {
   const child = document.createElement(tagName);
   if (className) {
@@ -31,7 +31,9 @@ function createAndAppend(parent, tagName, className = false, textContent = false
   parent.appendChild(child);
   return child;
 }
+```
 TS-verison:
+```
 export function createAndAppend(
   parent: HTMLElement,
   tagName: string,
